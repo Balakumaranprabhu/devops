@@ -19,5 +19,12 @@ jobs:
         run: echo "${{ env.VAR_ENV }}"
       - name: testJobVariabel
         run: echo "${{env.VAR_ENVV}}"
-      - name: Testsum
-        run: echo "${{ fromJSON(env.VAR_NUM1) + fromJSON(env.VAR_NUM2) }}"
+
+  newjob:
+    runs-on: ubuntu-latest
+    needs: say-hello-inline-bash
+
+  newjob2:
+    runs-on: ubuntu-latest
+    needs: [say-hello-inline-bash, newjob]
+    
