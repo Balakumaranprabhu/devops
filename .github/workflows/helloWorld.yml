@@ -16,4 +16,4 @@ jobs:
       - name: customVaribale
         run: echo "${{ env.VAR_ENV }}"
       - name: testJobVariabel
-        run: echo "{{env.VAR_ENVV}}"
+        run: echo $"{{env.VAR_ENVV}}"
