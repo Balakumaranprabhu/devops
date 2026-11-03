@@ -18,6 +18,6 @@ jobs:
       - name: customVaribale
         run: echo "${{ env.VAR_ENV }}"
       - name: testJobVariabel
-        run: echo $"{{env.VAR_ENVV}}"
+        run: echo "${{env.VAR_ENVV}}"
       - name: Testsum
-        run: echo $"{{env.VAR_NUM1 + env.VAR_NUM2 }}"
+        run: echo "${{env.VAR_NUM1 + env.VAR_NUM2 }}"
