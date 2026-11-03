@@ -8,9 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VAR_ENVV: Test
-    env:
       VAR_NUM1: 2
-    env:
       VAR_NUM2: 3
     steps:
       - name: Say Hello
