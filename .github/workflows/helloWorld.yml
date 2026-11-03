@@ -20,4 +20,4 @@ jobs:
       - name: testJobVariabel
         run: echo "${{env.VAR_ENVV}}"
       - name: Testsum
-        run: echo "${{env.VAR_NUM1 + env.VAR_NUM2 }}"
+        run: echo "${{ fromJSON(env.VAR_NUM1) + fromJSON(env.VAR_NUM2) }}"
